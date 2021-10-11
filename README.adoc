@@ -1,0 +1,5 @@
+= Personal Website for Sukma Wardana
+Sukma Wardana <swardana@tutanota.com>
+2021-09-29
+
+Personal website for Sukma Wardana build with https://jbake.org[JBake]
