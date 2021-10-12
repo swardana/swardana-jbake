@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sukma Wardana - Indie Hacker, Software Engineer, Technical Writer</title>
+    <link>https://swardana.com</link>
+    <atom:link href="https://swardana.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Personal website for Sukma Wardana</description>
+    <language>en_US</language>
+    <pubDate>Tue, 12 Oct 2021 10:06:03 +0700</pubDate>
+    <lastBuildDate>Tue, 12 Oct 2021 10:06:03 +0700</lastBuildDate>
+
+
+  </channel>
+</rss>
