@@ -1,0 +1,54 @@
+Pre-2021 Year in Review
+=======================
+Sukma Wardana <swardana@tutanota.com>
+v1.0, 2021-11-24
+:jbake-type: post
+:jbake-tags: personal
+:jbake-status: published
+:jbake-spoiler: Personal life update from Sukma Wardana
+
+_Welp...2021 is only last for a month._
+
+I know it's still early for _2021 Year in Review_, but I can't wait to publish this post. So, I decided to make it as Pre-2021 Year in Review.
+
+There a lot has happened, my plan for 2021 is...well, not all goes as I expected. I know you can relate too; we're all in that boat.
+
+_So what is happened in 2021?_
+
+== One Year since Moving on Capital City
+
+In January, I finally rented a two-floor house for a year. This is a big change after living in a tiny apartment since moving in. My wife Laila delighted with more spaces and rooms; we're not good with confined spaces. Slow but sure we filled the house with our dreamed house appliances and furniture.
+
+Now, I have my own working room with a proper desk and chair. But, the fun is decorating our newborn baby room. Yes, Laila was diagnosed as pregnant in December 2020. So, this is also the reason I opt to rent a two-floor house instead of keeping living in our previous tiny apartment.
+
+The only cons are the location of the house is within the borders. It's quite far from my workplace, 45 minutes driving. Need one-hour driving to the hospital for pregnancy consultation with doctor specialist.
+
+Still, the pros outweigh the cons. We believed these are the best choices we've ever made.
+
+== Side Hustle and Open Source Project
+
+My goal for 2021 is to create an open-source project and start my own side-hustle. But, the reality is hard to do both this year.
+
+My full-time job is take almost 80% of my time and focus. Caretaking my wife during pregnancy took the rest of my 20% of it. I need to choose between my side-hustle or doing my open-source project. I decided to focus on the latter.
+
+The reason is simple, I still couldn't find any business idea. I couldn't focus on freelancing. And I already have a few ideas for my open-source project. So, I decided to focus on my open-source projects.
+
+== Monetary Issue
+Living in the capital city and spending on buying home appliances and furniture. Doctor specialist visits for regnancy consultations and having a baby. Believe me, this is cost me a lot this year. If it's not because of the healthcare insurance provided by my current employee. I couldn't think that my saving is enough.
+
+In fact, my saving is not enough. I even need to take the debt with my company credit card. This debt was planned upfront during our calculation. I realized that my saving and insurance coverage is not enough. The good news is, during calculating this debt we could pay full in November. Which is this month.
+
+From August until the end of this year, I'm being frugal. I start to stop all my subscriptions that were not important. Email, VPS and donation towards my favourite open-source projects. The only thing that I made an exception is:
+
+- Newborn baby necessities.
+- Netflix subscription (we couldn't live without this)
+
+After stoping all my subscriptions, I loose my online presence. My email was not available anymore since I'm stop paying for it. My website did not exist anymore since my VPS is deactivated. I realize how big the loss is, but I must focus on stabilizing my finances first.
+
+== Why Making this Pre-2021 Year in Review?
+
+After all the struggle, finally, I could find some of my time. I start to re-create my online presence once again. Using the available free option of course. I started with a build once again my personal website.
+
+I remember another goal for 2021 is to write a lot. I have my personal website for 2021. But, before I could post my first blog it was taken down. And this post is to amend it.
+
+A small update for what has happened during this year is suitable to be my first post. My next step is, of course, to keep on the survival mode until the end of this year. Focus on stabilizing my finance. Spend more time with my wife and my cute daughter. Continuing my open-source project. Improving my personal skills. So, I could be ready for 2022.
