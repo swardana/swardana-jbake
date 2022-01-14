@@ -1,0 +1,123 @@
+Installing Adoptium Eclipse Temurin 17 on Windows 10
+====================================================
+Sukma Wardana <swardana@tutanota.com>
+v1.0, 2021-12-27
+:jbake-type: post
+:jbake-tags: java
+:jbake-status: published
+:jbake-spoiler: A detailed guide on how to install Adoptium Eclipse Temurin JDK 17 on Windows 10
+:jbake-prism:
+
+The "Eclipse Temurin" http://whichjdk.com/#tldr[recommend] for OpenJDK binary distribution.
+Released by https://adoptium.net[Eclipse Adoptium] which was before known as AdoptOpenJDK.
+If you still confused about what is OpenJDK binary distribution, read this https://www.azul.com/blog/what-is-openjdk/[post].
+
+I will guide you in installing Eclipse Temurin version 17, which is the latest LTS version, on Windows 10.
+From the start till you could run Java command on Windows Command Prompt.
+
+== Download and Install Eclipse Temurin
+
+First, get the Eclipse Temurin installer from the https://adoptium.net[Adoptium Website].
+The download button will choose installer based on your Operating System.
+So, make sure to download *.msi* installer.
+
+When it's done, double click the *.msi* installer.
+
+=== Welcome Setup Wizard
+
+image::/img/blog/jdk17-win10/jdk17-win10-1.png[Setup Wizard]
+
+The first time shown to you after double-clicking the *.msi* installer is the *Setup Wizard* window.
+There is nothing special from the first step, click the _Next_ button.
+
+=== Setup Configuration
+
+image::/img/blog/jdk17-win10/jdk17-win10-2.png[Setup Configuration]
+
+The second step is to configure the installation process.
+Unless you understand what you want to configure or optimize, leave it as is.
+So, click the _Next_ button.
+
+=== Process the Installation Setup
+
+image::/img/blog/jdk17-win10/jdk17-win10-3.png[Start to Install]
+
+The third is asking your confirmation whether could process the installation or not.
+Click the _Install_ button already.
+
+=== User Access Control
+
+image::/img/blog/jdk17-win10/jdk17-win10-4.png[User Access Control]
+
+Don't worry if the *User Access Control* window pops up.
+Click _Yes_ to allow the installation of Eclipse Temurin on your machine.
+
+=== Installation Progress
+
+image::/img/blog/jdk17-win10/jdk17-win10-5.png[Installation Progress]
+
+The installation process is not that long.
+You can take a break and sip your coffee while waiting for the process.
+
+=== Installation Completed
+
+image::/img/blog/jdk17-win10/jdk17-win10-6.png[Installation Completed]
+
+When the progress is done, the *Completed Setup Wizard* window will show up.
+Click _Yes_ to confirm.
+
+Now, you already have installed Eclipse Temurin 17.
+You could verify with open the _Command Prompt_ and executing below command:
+
+[source, shell]
+----
+java --version    <1>
+javac --version   <2>
+----
+
+<1> Check the Java Runtime Version.
+<2> Check the Java Compiler Version.
+
+== Setup %JAVA_HOME%
+
+The only thing that missing from Eclipse Temurin is it does not set up _%JAVA_HOME%_ for you.
+So, if you're using Apache Maven or Gradle on _Command Prompt_ you will have an error.
+Here is an example from Apache Maven when _%JAVA_HOME%_ is missing
+
+[source, shell]
+____
+C:\Users\anadr>mvn --version
+The JAVA_HOME environment variable is not defined correctly
+This environment variable need to run this program
+NB: JAVA_HOME should point to a JDK, not a JRE
+____
+
+You could set up the _%JAVA_HOME%_ with the below steps:
+
+=== Open Edit Environment Variable
+
+image::/img/blog/jdk17-win10/jdk17-win10-7.png[Edit Environment Variables]
+
+On the search prompt type _Edit Environment_ and you will have autocompletion for _Edit Environment variables for your account_.
+Click or type *Enter* to open it.
+
+=== New Environment Variable
+
+image::/img/blog/jdk17-win10/jdk17-win10-8.png[Environment Variables Window]
+
+To set up the _JAVA_HOME_ is to add on the *User Variables* section.
+So, click the _New..._ button on the _User Variables_ section to add the _JAVA_HOME_.
+
+=== Eclipse Temurin JAVA_HOME
+
+image::/img/blog/jdk17-win10/jdk17-win10-9.png[New User Variable]
+
+When the *New User Variable* Window is showing up what you need to do is:
+
+* Type _JAVA_HOME_ for the variable name.
+* Click the _Browse Directory..._ button and find the location of installed Eclipse Temurin in your machine.
+* When it is done, click the _Ok_ button.
+
+Now, you can verify the _JAVA_HOME_ and _java_ command on your _Command Prompt_.
+
+image::/img/blog/jdk17-win10/jdk17-win10-10.png[Command Prompt]
