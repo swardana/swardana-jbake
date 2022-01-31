@@ -7,7 +7,7 @@
   <nav>
     <ul class="nav">
       <li class="nav-item <#if content.type?? && content.type?matches("masterindex", "i")>nav-item-active</#if> ">
-        <a href="<#if content.rootpath?? >${content.rootpath}<#else>/</#if>">Home</a>
+        <a href="/">Home</a>
       </li>
       <li class="nav-item <#if content.type?? && content.type?matches("archive", "i")>nav-item-active</#if>">
         <a href="<#if content.rootpath?? >${content.rootpath}</#if>${config.archive_file}">Archive</a>
