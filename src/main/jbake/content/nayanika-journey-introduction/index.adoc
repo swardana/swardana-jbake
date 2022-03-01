@@ -1,0 +1,171 @@
+Nayanika Development Journey: Introduction
+==========================================
+Sukma Wardana <swardana@tutanota.com>
+v1.0, 2022-02-01
+:jbake-type: post
+:jbake-tags: java, javafx, nayanika, open-source
+:jbake-status: published
+:jbake-spoiler: An introduction to Nayanika, picture viewer application.
+:jbake-prism:
+
+Dear readers, nice to meet you.
+My name is Sukma Wardana, a Java developer from Indonesia.
+
+My day job is as a back-end developer.
+I build a service that consumes, produces, or often does both.
+
+I've spent most of my day times batling in consoles to read logs produced by my services.
+When you doing this for almost 5 years.
+Believe me, you will feel bored.
+
+So, during my free time, I will learn something different.
+I will create a project during my learning journey.
+But, most of them will be buried on my machine or deserted on my Github repository.
+
+But, not today!
+
+I have a goal to see my side-project launch.
+Seeing someone use my side-project of course is what I want.
+But, in meantime, I'm content with being the only user.
+
+== Introduce Nayanika
+
+My side-project name is _Nayanika_ a picture viewer desktop application.
+
+Before I continue, I need to **emphasize** that my side-project is not ready, yet.
+I decided that I want to develop it and share the journey.
+
+And this will be the first page of my journey on building it.
+
+Well, actually I already make the application ready to use around last year.
+But, I found something is not fit.
+So, I decided to archive it and start from the beginning.
+
+The reason why I abandon it and created it again from the beginning will be on a different story.
+
+=== Background
+
+During my teenager, I love reading.
+I would read anything.
+But, my interest is in graphic books such as comics and mangas.
+
+I must make a confession.
+That I consumed piracy comics and mangas during my teenager.
+But, it's stopped when I have a job and steady income.
+I would buy it legally either the print edition or digital edition.
+
+Now, let's back again when I mention consuming piracy comics and mangas.
+Often time, the piracy comics and mangas are a bundle of images.
+At that time, I'm a Windows 7 Home edition user.
+I use the built-in _Windows Photo Viewer_ application to read the comics and mangas.
+
+image::/img/blog/nayanika-journey/windows-photo-viewer.png[Screenshot of WIndows Photo Viewer in Windows 7, showing D'ARTAGNAN and the Three Musketeers]
+
+I'm a happy user of Windows Photo Viewer.
+
+=== Everything is Ephemeral
+
+Sadly, Windows Photo Viewer is only last on Windows version 7.
+When you upgrade to Windows 8 onwards, what you will get is Microsoft Photos.
+
+But, I'm not the only one who loved Windows Photo Viewer.
+Because there is a https://www.techradar.com/how-to/how-to-restore-and-use-windows-photo-viewer-in-windows-10[hack on bring back the Windows Photo Viewer on Windows 10].
+
+Windows Photo Viewer is clearly abandoned by Microsoft.
+Using hack to bring it back is wrong.
+It's like bringing back something that has already been forgotten back to life.
+You can't complain if it's buggy.
+Or the performance is not on par during its golden time.
+
+== Picture Viewer Preferences
+
+Do I try different applications?
+Yes, I do.
+But, it's limited to the built-in app on the Operating System itself.
+I have tried Windows Photo on Windows 10, Gweenview from KDE, and Preview from Mac OS.
+
+My reason to build my own application, Nayanika, is because _nothing checked all of my boxes, so I am building one myself_.
+Welcome to open-source.
+
+=== Building for Desktop
+
+I prefer to read my comics and mangas with my laptop.
+First, I prefer a larger monitor to read rather than using my smartphone.
+Second, I spent most of the time in front of my laptop.
+Decided from the beginning that Nayanika is for desktop applications.
+
+Today, Windows is not only my primary Operating System.
+I have used macOS and Linux often too.
+I know this is a luxury to be able to experience the three big operating systems.
+But, this luxury makes me want to develop Nayanika able to run on those three operating systems.
+
+Nayanika is a desktop application and must be able to run on Windows, Linux, and macOS.
+
+=== Keyboard Centric
+
+Being a desktop application, I didn't want it to depend solely on clicking with the mouse.
+It must support the keyboard shortcut for triggering an action.
+If possible, the keyboard shortcut must be the first-class citizen on the application.
+
+Thus, documenting keyboard shortcuts for Nayanika is on the to-do list.
+I'm still debating whether the user could re-mapping the shortcut or not.
+But, in the beginning, all the shortcuts will be defined and can't be re-mapped.
+
+== Technologies
+
+Making a desktop application that is able to run on Windows, Linux, and macOS.
+This is already a daunting task for me.
+I have never had experience in building a desktop application.
+I'm not good at designing _User Interface_ (UI) that have great _User Experience_ (UX).
+
+But, I still want Nayanika to launch.
+
+My technology choice is what I'm familiar with, Java.
+I have 5 years coding with Java building backend services.
+I know that Java could run anywhere as long as there JVM installed.
+But the most important thing is Java has two great GUI Frameworks.
+Which are Swing and JavaFX.
+
+Swing is known as a stable GUI framework within Java worlds.
+It's been bundled with _Java Development Kit_ (JDK) since 2007.
+A real-world examples application built with Swing is the Java IDE.
+Eclipse Java, Jetbrains Intellij, and Apache NetBeans are built with Swing.
+
+While JavaFX is relatively new in the Java world.
+Introduced at JavaOne 2007 then open-sourced in 2011.
+Bundled with JDK in 2012, but decoupled in 2018 and until today it's become an independent project under https://openjfx.org[openjfx].
+And for real-world examples, https://www.jfx-central.com/real_world[this] is the best source to check.
+
+My better choice would be to use the Swing framework, but in the end, I choose JavaFX.
+Even though JavaFX is still ongoing developed by https://gluonhq.com/services/javafx-support/[people who truly love JavaFX].
+Rather than the stagnant Swing frameworks, I bet my GUI frameworks with JavaFX.
+
+Fun fact, I have never worked with Java GUI before.
+So, this will be an interesting learning process.
+
+== Function Wishlist
+
+Currently, this is my wishlist from a picture viewer application.
+In a rough order of priorities for Nayanika, it is as follows:
+
+=== High Priority
+
+. Processing user local directory which pictures stored.
+The first picture found will be displayed.
+. Processing picture file from user local directory.
+The picture will be displayed.
+. Navigate next, previous, last, and beginning within the pictures.
+. Zoom and Pan displayed picture.
+
+=== Medium Priority
+
+. Applied sorting on pictures.
+. Slide-show animation.
+
+=== Low Priority
+
+. Support CBZ / CBR file.
+
+I hope this provided you a general idea about what is Nayanika and my preferences.
+Currently, the project is still on the initial process.
+The project is open-source and source code is available at https://github.com/swardana/nayanika[Github].
