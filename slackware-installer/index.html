@@ -1,0 +1,233 @@
+
+
+  <!DOCTYPE html>
+  <html lang="en_US">
+    <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slackware Installer</title>
+<meta name="description" content="Create Slackware Linux Installer from Slackware File Tree">
+<meta name="author" content="Sukma Wardana">
+<meta name="keywords" content="linux, slackware">
+<meta name="generator" content="JBake">
+
+
+<!-- Open graph -->
+<meta property="og:title" content="Slackware Installer">
+<meta property="og:description" content="Create Slackware Linux Installer from Slackware File Tree">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Sukma Wardana - Indie Hacker, Software Engineer, Technical Writer">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="675" />
+
+<!-- Twitter -->
+<meta name="twitter:title" content="Slackware Installer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="https://twitter.com/iamswardana">
+<meta name="twitter:description" content="Create Slackware Linux Installer from Slackware File Tree">
+<meta name="twitter:creator" content="@iamswardana">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="icon" href="../favicon.ico" sizes="16x16 32x32">
+
+<!-- iOS -->
+<link rel="mask-icon" color="#FFFFFF" href="../img/favicons/apple-touch-icon.png">
+
+    <link rel="apple-touch-icon" sizes="16x16" href="../img/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="../img/favicons/favicon-32.png">
+
+<!-- Windows 8 IE 10 -->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="../img/favicons/mstile-150x150.png" />
+
+<!-- Windows 8.1 + IE11 and above -->
+<meta name="msapplication-config" content="../browserconfig.xml" />
+
+<!-- Web App manifest -->
+<link rel="manifest" href="../web.manifest">
+<meta name="theme-color" content="#FFFFFF" />
+
+  <link id="prismCSS" rel="stylesheet" href="../css/prism-base16-monokai.dark.css">
+<link id="styleCSS" rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+<header>
+  <h1 class="home">
+    <a href="/">Sukma Wardana</a>
+  </h1>
+
+  <nav>
+    <ul class="nav">
+      <li class="nav-item  ">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item ">
+        <a href="../archive.html">Archive</a>
+      </li>
+      <li class="nav-item ">
+        <a href="../about.html">About Me</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+      <main class="tmpl-post">
+    <h1>Slackware Installer</h1>
+    <time datetime="2022-03-23">23 Mar 2022</time>
+    <a href="../tags/linux.html" class="post-tag">
+      linux
+    </a>
+    <a href="../tags/slackware.html" class="post-tag">
+      slackware
+    </a>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Slackware Linux project is one of the oldest Linux Distributions (Distros).
+First launched on July 16th, 1993.
+Slackware is still actively being developed by famous Slackware&#8217;s
+<em>Benevolent Dictator for Life</em> (BDFL) Patrick Volkerding.
+Actually, Patrick was not alone in developing Slackware.
+Help from volunteers and testers give a big enough impact for the sustainability of Slackware.
+If you are interested with <a href="http://connie.slackware.com/~alien/tdose2009/t-dose-slackware.pdf"><em>History of Slackware Development</em></a> by Eric Hameleers, you will find lots of interesting trivia there.</p>
+</div>
+<div class="paragraph">
+<p>Within 27th years of Slackware development, only one thing has changed.
+The way we make donations to Slackware Linux.
+The official store that should sell CDs / DVDs and merchandise from Slackware Linux <a href="https://www.linuxquestions.org/questions/slackware-14/donating-to-slackware-4175634729/#post5882751">does not give loyalty to Patrick Volkerding</a> for approximately two (2) years.
+Now donations to Slackware can be made through <a href="https://www.linuxquestions.org/questions/slackware-14/donating-to-slackware-4175634729/page11.html#post5883695">Patrick&#8217;s official Paypal account</a> or <a href="https://www.linuxquestions.org/questions/slackware-14/is-this-patreon-account-legit-4175658493/page4.html#post6021503">Slackware&#8217;s official Patreon account</a>.
+The official closure of Slackware store, means no more CDs / DVDs of Slackware Linux that could be purchased.
+An alternative is downloading ISO image of Slackware Linux.</p>
+</div>
+<div class="paragraph">
+<p>The ISO image of Slackware Linux can be obtained on <a href="https://mirrors.slackware.com/slackware/slackware-iso/">Slackware mirror</a>.
+For those of you who prefer to use Torent, <a href="http://www.slackware.com/getslack/torrents.php">it&#8217;s also available</a>.
+The latest stable version of Slackware is 14.2 (when this post published), which was released on June 1st, 2015.
+So far, there have been many updates and patches uploaded to the upstream code.
+You will need to download a fairly large update after installing Slackware 14.2 to make sure to have the latest updates and patches.
+Actually there are other ways besides using ISO images, which is build an ISO image from Slackware File Tree.
+In my opinion, this method is cumbersome at first, but will be very helpful in the long run.
+I think it is worth to tell.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_slackware_file_tree">Slackware File Tree</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The development of Slackware Linux is pretty unique.
+No source code version control, no public code repository, no issue tracking system.
+Contributions and bug reports done in an informal way, mostly via email or <a href="https://www.linuxquestions.org/questions/slackware-14/">linuxquestions.org</a>.
+There is only final product of Slackware Linux and it is available on <a href="https://mirrors.slackware.com/slackware/">Slackware mirrors</a>.
+The interesting thing that I got from Slackware is, when you want to update your Slackware, you basically download from this Slackware File Tree.
+Of course this depends on what version you are using.
+Similarly, Slackware ISO image is also based on this Slackware File Tree.
+So, instead of downloading an ISO image, it is better to make an ISO image based on the always up-to-date Slackware File Tree.</p>
+</div>
+<div class="paragraph">
+<p>The good thing is there are many <a href="https://mirrors.slackware.com/mirrorlist/">mirrors of Slackware File Tree</a> and available through HTTPS, HTTP, FTP and <a href="https://rsync.samba.org/">rsync</a>.
+So, chose the mirror that is closest to you, for example I am living in Indonesia, I will choose <a href="https://repo.ukdw.ac.id/">repo.ukdw.ac.id</a>.
+Download Slackware File Tree is equal with downloading Slackware ISO image in term of total file size.
+But, the benefit downloading Slackware File Tree mirror is rsync support.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="shell">rsync -avzP --bwlimit 500 --delete repo.ukdw.ac.id::slackware/slackware64-14.2/ /home/swardana/slackware/repo/slackware64-14.2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Creating ISO image from Slackware File Tree has been well documented.
+You can read it yourself at <code>$SLACKWARE_FILE_TREE/isolinux/README.txt</code>.
+To create ISO image from the Slackware File Tree, open a terminal and make sure your working directory located in <code>$SLACKWARE_FILE_TREE</code> (<code>$SLACKWARE_FILE_TREE</code> is Slackware File Tree directory which contains <code>ChangeLog.txt</code> file), <code>cd $SLACKWARE_FILE_TREE</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="shell">mkisofs -o /tmp/slackware-dvd.iso \
+  -R -J -A "Slackware Install" \
+  -hide-rr-moved \
+  -v -d -N \
+  -no-emul-boot -boot-load-size 4 -boot-info-table \
+  -sort isolinux/iso.sort \
+  -b isolinux/isolinux.bin \
+  -c isolinux/isolinux.boot \
+  -eltorito-alt-boot -no-emul-boot -eltorito-platform 0xEF \
+  -eltorito-boot isolinux/efiboot.img \
+  -m 'source' \
+  -V "SlackDVD" .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attention! Don&#8217;t forget the period (.) at the end of command, yes it is necessary.</p>
+</div>
+<div class="paragraph">
+<p>The above command will produce a Slackware ISO image with name <strong>slackware-dvd.iso</strong> located in <code>/tmp</code> directory.
+But, if you prefer a bootable USB stick than a DVDs, extra steps required.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="shell">isohybrid -u /tmp/slackware-dvd.iso</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, you have the Slackware ISO image along with the latest updates and patches.
+No need to worry about bug or vulnerability in your machine.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extra_content">Extra Content</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_create_bootable_usb_stick">Create Bootable USB Stick</h3>
+<div class="paragraph">
+<p>There are several ways to make a bootable USB stick, one of them is <a href="https://linux.die.net/man/1/dd">dd</a> and this tool is already in Slackware.
+To use this tool is very easy.
+Prepare a USB stick with a size of ~4GB, and plug it into your machine.
+However, <strong>don&#8217;t mount it!</strong> Because <strong>dd</strong> need the name of the device, not the name of the partition e.g <code>/dev/sdb</code> instead of <code>/deb/sdb1</code>.
+To check the USB Stick device name can use command <code>fdisk -l</code> execute as super user.
+Argument for dd consist of <strong>if</strong> and <strong>of</strong>.
+The <strong>if</strong> determine the ISO image file (<code>if=/tmp/slackware-dvd.iso</code>) and the <strong>of</strong> determine the USB stick device name (<code>of=/dev/sdx</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="shell">dd if=/tmp/slackware-dvd.iso of=/dev/sdb</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_always_update_with_stable_and_current_release">Always Update with Stable and Current Release</h3>
+<div class="paragraph">
+<p>Did you know that besides the stable version, Slackware also has <em>current</em> version?
+The <em>current</em> Slackware File Tree is a stable version candidate in the future.
+So, I have both Slackware File Tree stable and Slackware File Tree current version and always update it.
+Because when the current version has been released as the latest Slackware release, I will:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete my stable Slackware File Tree.</p>
+</li>
+<li>
+<p>Copy my current Slackware File Tree and rename it into the latest release version.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In this way, I have both stable and soon to be current Slackware File Tree.
+I do not need to download again from the beginning.</p>
+</div>
+</div>
+</div>
+</div>    <p><em>
+      If you have any comments or corrections please feel free to email them to me. Also, if you found any of the content on this website useful consider <a href="https://www.buymeacoffee.com/swardana">buy me a coffee</a> ;)
+    </em></p>
+      <hr>
+      <ul>
+          <li>Previous: <a href="../nayanika-journey-introduction/index.html">Nayanika Development Journey: Introduction</a></li>
+      </ul>
+      </main>
+    </body>
+  </html>
+
+
+
