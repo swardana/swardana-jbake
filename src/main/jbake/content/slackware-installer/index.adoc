@@ -1,0 +1,117 @@
+Slackware Installer
+===================
+Sukma Wardana <swardana@tutanota.com>
+v1.0, 2022-03-23
+:jbake-type: post
+:jbake-tags: linux, slackware
+:jbake-status: published
+:jbake-spoiler: Create Slackware Linux Installer from Slackware File Tree
+:jbake-prism:
+
+The Slackware Linux project is one of the oldest Linux Distributions (Distros).
+First launched on July 16th, 1993.
+Slackware is still actively being developed by famous Slackware's
+__Benevolent Dictator for Life__ (BDFL) Patrick Volkerding.
+Actually, Patrick was not alone in developing Slackware.
+Help from volunteers and testers give a big enough impact for the sustainability of Slackware.
+If you are interested with http://connie.slackware.com/~alien/tdose2009/t-dose-slackware.pdf[__History of Slackware Development__] by Eric Hameleers, you will find lots of interesting trivia there.
+
+Within 27th years of Slackware development, only one thing has changed.
+The way we make donations to Slackware Linux.
+The official store that should sell CDs / DVDs and merchandise from Slackware Linux https://www.linuxquestions.org/questions/slackware-14/donating-to-slackware-4175634729/#post5882751[does not give loyalty to Patrick Volkerding] for approximately two (2) years.
+Now donations to Slackware can be made through https://www.linuxquestions.org/questions/slackware-14/donating-to-slackware-4175634729/page11.html#post5883695[Patrick's official Paypal account] or https://www.linuxquestions.org/questions/slackware-14/is-this-patreon-account-legit-4175658493/page4.html#post6021503[Slackware's official Patreon account].
+The official closure of Slackware store, means no more CDs / DVDs of Slackware Linux that could be purchased.
+An alternative is downloading ISO image of Slackware Linux.
+
+The ISO image of Slackware Linux can be obtained on https://mirrors.slackware.com/slackware/slackware-iso/[Slackware mirror].
+For those of you who prefer to use Torent, http://www.slackware.com/getslack/torrents.php[it's also available].
+The latest stable version of Slackware is 14.2 (when this post published), which was released on June 1st, 2015.
+So far, there have been many updates and patches uploaded to the upstream code.
+You will need to download a fairly large update after installing Slackware 14.2 to make sure to have the latest updates and patches.
+Actually there are other ways besides using ISO images, which is build an ISO image from Slackware File Tree.
+In my opinion, this method is cumbersome at first, but will be very helpful in the long run.
+I think it is worth to tell.
+
+== Slackware File Tree
+
+The development of Slackware Linux is pretty unique.
+No source code version control, no public code repository, no issue tracking system.
+Contributions and bug reports done in an informal way, mostly via email or https://www.linuxquestions.org/questions/slackware-14/[linuxquestions.org].
+There is only final product of Slackware Linux and it is available on https://mirrors.slackware.com/slackware/[Slackware mirrors].
+The interesting thing that I got from Slackware is, when you want to update your Slackware, you basically download from this Slackware File Tree.
+Of course this depends on what version you are using.
+Similarly, Slackware ISO image is also based on this Slackware File Tree.
+So, instead of downloading an ISO image, it is better to make an ISO image based on the always up-to-date Slackware File Tree.
+
+The good thing is there are many https://mirrors.slackware.com/mirrorlist/[mirrors of Slackware File Tree] and available through HTTPS, HTTP, FTP and https://rsync.samba.org/[rsync].
+So, chose the mirror that is closest to you, for example I am living in Indonesia, I will choose https://repo.ukdw.ac.id/[repo.ukdw.ac.id].
+Download Slackware File Tree is equal with downloading Slackware ISO image in term of total file size.
+But, the benefit downloading Slackware File Tree mirror is rsync support.
+
+[source, shell]
+----
+rsync -avzP --bwlimit 500 --delete repo.ukdw.ac.id::slackware/slackware64-14.2/ /home/swardana/slackware/repo/slackware64-14.2
+----
+
+Creating ISO image from Slackware File Tree has been well documented.
+You can read it yourself at `$SLACKWARE_FILE_TREE/isolinux/README.txt`.
+To create ISO image from the Slackware File Tree, open a terminal and make sure your working directory located in `$SLACKWARE_FILE_TREE` (`$SLACKWARE_FILE_TREE` is Slackware File Tree directory which contains `ChangeLog.txt` file), `cd $SLACKWARE_FILE_TREE`.
+
+[source, shell]
+----
+mkisofs -o /tmp/slackware-dvd.iso \
+  -R -J -A "Slackware Install" \
+  -hide-rr-moved \
+  -v -d -N \
+  -no-emul-boot -boot-load-size 4 -boot-info-table \
+  -sort isolinux/iso.sort \
+  -b isolinux/isolinux.bin \
+  -c isolinux/isolinux.boot \
+  -eltorito-alt-boot -no-emul-boot -eltorito-platform 0xEF \
+  -eltorito-boot isolinux/efiboot.img \
+  -m 'source' \
+  -V "SlackDVD" .
+----
+
+Attention! Don't forget the period (.) at the end of command, yes it is necessary.
+
+The above command will produce a Slackware ISO image with name **slackware-dvd.iso** located in `/tmp` directory.
+But, if you prefer a bootable USB stick than a DVDs, extra steps required.
+
+[source, shell]
+----
+isohybrid -u /tmp/slackware-dvd.iso
+----
+
+Now, you have the Slackware ISO image along with the latest updates and patches.
+No need to worry about bug or vulnerability in your machine.
+
+== Extra Content
+
+=== Create Bootable USB Stick
+
+There are several ways to make a bootable USB stick, one of them is https://linux.die.net/man/1/dd[dd] and this tool is already in Slackware.
+To use this tool is very easy.
+Prepare a USB stick with a size of ~4GB, and plug it into your machine.
+However, **don't mount it!** Because **dd** need the name of the device, not the name of the partition e.g `/dev/sdb` instead of `/deb/sdb1`.
+To check the USB Stick device name can use command `fdisk -l` execute as super user.
+Argument for dd consist of **if** and **of**.
+The **if** determine the ISO image file (`if=/tmp/slackware-dvd.iso`) and the **of** determine the USB stick device name (`of=/dev/sdx`).
+
+[source, shell]
+----
+dd if=/tmp/slackware-dvd.iso of=/dev/sdb
+----
+
+=== Always Update with Stable and Current Release
+
+Did you know that besides the stable version, Slackware also has _current_ version?
+The _current_ Slackware File Tree is a stable version candidate in the future.
+So, I have both Slackware File Tree stable and Slackware File Tree current version and always update it.
+Because when the current version has been released as the latest Slackware release, I will:
+
+. Delete my stable Slackware File Tree.
+. Copy my current Slackware File Tree and rename it into the latest release version.
+
+In this way, I have both stable and soon to be current Slackware File Tree.
+I do not need to download again from the beginning.
