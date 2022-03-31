@@ -1,0 +1,9 @@
+Nayanika Development Journey: Minimum Viable Product
+====================================================
+Sukma Wardana <swardana@tutanota.com>
+v1.0, 2022-02-01
+:jbake-type: post
+:jbake-tags: java, javafx, nayanika, open-source
+:jbake-status: published
+:jbake-spoiler: First milestone of the development journey, a MVP product.
+:jbake-prism:
