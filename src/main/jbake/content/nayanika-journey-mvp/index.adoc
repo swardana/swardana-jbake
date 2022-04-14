@@ -1,9 +1,74 @@
 Nayanika Development Journey: Minimum Viable Product
 ====================================================
 Sukma Wardana <swardana@tutanota.com>
-v1.0, 2022-02-01
+v1.0, 2022-04-06
 :jbake-type: post
 :jbake-tags: java, javafx, nayanika, open-source
 :jbake-status: published
 :jbake-spoiler: First milestone of the development journey, a MVP product.
 :jbake-prism:
+
+Dear readers, I would like to share a great news.
+Nayanika _Minimun Viable Product_ (MVP) is done!!
+
+I thought I won't make it.
+My day job and taking care baby is taking a lot of my time.
+But, I keep trying to find one or two hours during my week day for developing Nayanika.
+And, I proudly share with all of you the https://github.com/swardana/nayanika/releases/tag/v1.0-M1[_very first milestone release_] of Nayanika.
+
+== Project Preparation
+
+So, what I've done till I reach this milestone?
+
+Preparing an open-source project is not different with making your side-project.
+The only different is whether the project is friendly for collaboration or not.
+That's mean, the preparation is start even before I write the code.
+
+=== Source Control Management and Administrative
+
+I'm choosing Git as the _source-control management_ (SCM) and Github for the hosting repository.
+I know that many developer already familiar with Git and Github.
+This will make collaboration will be easy.
+
+So, the very first step I took is creating a repository for Nayanika on Github.
+Psstt the repository could be accessed in here: https://github.com/swardana/nayanika
+
+The first artefacts that I prepare is the license, changelog document and the readme.
+
+I decided to choose GNU GPL v3 or later for the license.
+Why? Because, I see many popular open-source desktop application using this license.
+I don't see any harm for using this license.
+My project is not a library, but a desktop application.
+
+What become a software without a changelog documentation?
+I want to noted all the changes, fixed, and added feature.
+And I don't want to relied on my Git commit history.
+I won't promise I will write a proper Git commit messages.
+
+So, I'm using https://keepachangelog.com/en/1.0.0/[Keep a Changelog] standard.
+The standard is simple and easy to follow.
+
+Last, is a readme document.
+Intended to put all important information of the project.
+For now, it only have few information.
+But, later I will gradually update it when something important comes up.
+
+=== Technologies
+
+Java & JavaFX is already decided for the tech-stack that I will use.
+With Maven as the build tools.
+Nayanika is using latest Java LTS version, which is Java 17.
+For the JavaFX version, it's also using version 17.0.2.
+
+My policy is to keep stick with Java LTS version, but use the latest JavaFX version.
+
+As for why I'm choose Maven as the build tools?
+The answer is because Maven configuration is simple compared to Gradle.
+I will not need to think hard on my Maven configuration.
+
+=== Code Quality
+
+Next, I want to make sure the code quality of Nayanika.
+So, I configure some rule within the Maven configuration.
+
+
