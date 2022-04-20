@@ -6,9 +6,301 @@
     <atom:link href="https://swardana.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Personal website for Sukma Wardana</description>
     <language>en_US</language>
-    <pubDate>Thu, 24 Mar 2022 15:36:50 +0700</pubDate>
-    <lastBuildDate>Thu, 24 Mar 2022 15:36:50 +0700</lastBuildDate>
+    <pubDate>Wed, 20 Apr 2022 11:37:38 +0700</pubDate>
+    <lastBuildDate>Wed, 20 Apr 2022 11:37:38 +0700</lastBuildDate>
 
+      <item>
+        <title>Nayanika Development Journey: Minimum Viable Product</title>
+        <link>https://swardana.com/nayanika-journey-mvp/index.html</link>
+        <pubDate>Wed, 6 Apr 2022 00:00:00 +0700</pubDate>
+        <guid isPermaLink="false">nayanika-journey-mvp/index.html</guid>
+        <description><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dear readers, I would like to share some great news.
+Nayanika <em>Minimun Viable Product</em> (MVP) is done!!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/img/blog/nayanika-journey/mvp.png" alt="Nayanika MVP">
+</div>
+</div>
+<div class="paragraph">
+<p>I thought I won&#8217;t make it.
+My day job and taking care baby are taking a lot of my time.
+But, I keep trying to find one or two hours during my weekday for developing Nayanika.
+And, I proudly share with all of you the <a href="https://github.com/swardana/nayanika/releases/tag/v1.0-M1"><em>very first milestone release</em></a> of Nayanika.
+This milestone theme is a MVP.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_preparation">Project Preparation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So, what I&#8217;ve done till I reach this milestone?</p>
+</div>
+<div class="paragraph">
+<p>Preparing an open-source project is not different from making your side project.
+The only difference is whether the project is friendly for collaboration or not.
+That means, the preparation starts even before I write the code.</p>
+</div>
+<div class="sect2">
+<h3 id="_source_control_management">Source Control Management</h3>
+<div class="paragraph">
+<p>I&#8217;m choosing Git as the <em>source-control management</em> (SCM) and Github for the hosting repository.
+I know that many developers are already familiar with Git and Github.
+This will make collaboration will be easy.</p>
+</div>
+<div class="paragraph">
+<p>So, the very first step I took in creating a repository for Nayanika on Github.
+Psstt the repository could be accessed here: <a href="https://github.com/swardana/nayanika" class="bare">https://github.com/swardana/nayanika</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_license">License</h3>
+<div class="paragraph">
+<p>Picking a license from the beginning is necessary.
+Without telling what license my project is, it will fall under <em>All Right Reserved</em>.
+I could assert my copyright and demand that you do not use my project in the future.
+Good intention alone is not enough.
+I need to explicitly declare that Nayanika since the beginning is an open-source project.</p>
+</div>
+<div class="paragraph">
+<p>As for the license, I&#8217;m choosing <strong>GNU GPL v3 or later</strong>.
+Why? Because I see many popular open-source desktop projects using it.
+I don&#8217;t see any harm for Nayanika.
+Thus, the decision is made that Nayanika will be under GNU GPL v3 or later.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changelog_document">Changelog Document</h3>
+<div class="quoteblock">
+<blockquote>
+<code>Change is inevitable. Growth is optional.</code>
+</blockquote>
+<div class="attribution">
+&#8212; John Maxwell
+</div>
+</div>
+<div class="paragraph">
+<p>Did you know what is an awful thing about changes?
+When there are no records about it.</p>
+</div>
+<div class="paragraph">
+<p>No, I don&#8217;t see Git commit history as a changes record.
+I mean, when was the last time you write an explanatory commit message?</p>
+</div>
+<div class="paragraph">
+<p>Sometimes, we need to paraphrase the words for better clarity.
+The change records are intended for non-tech people as well.</p>
+</div>
+<div class="paragraph">
+<p>I create a Changelog document from the very beginning.
+So, I could note down every change.
+I pick <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> style for my document.
+It&#8217;s simple and no-hassle when start to update the changes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_readme">Readme</h3>
+<div class="paragraph">
+<p>Nowadays, readme document is a norm.
+Project information will be available in this document.
+I intended for the readme document to be short.
+I will create separate documents if necessary.
+But, for now, the readme document should be enough.
+Even I need still need to update it gradually.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technologies">Technologies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since beginning, Java is already choosen as the programming language.
+While, JavaFX is for the <em>Graphical User Interface</em> (GUI) framework.
+Nayanika using latest <em>Long-Term Support</em> (LTS) Java version 17.
+If possible, I will use the new API introduce till Java 17.</p>
+</div>
+<div class="paragraph">
+<p>Meanwhile for the JavaFX, my policy is to stick with available latest release version.
+Since Java 11, JavaFX is decoupled from <em>Java Development Kit</em> (JDK).
+Now, JavaFX could be included as dependencies on the Java project.
+It&#8217;s simple as updating the release version for JavaFX dependencies on the build tools.</p>
+</div>
+<div class="sect2">
+<h3 id="_build_tools">Build Tools</h3>
+<div class="paragraph">
+<p>In Java worlds, there is the big three of build tools.
+Apache Maven, Apache Ant, and Gradle.
+But, today&#8217;s only Apache Maven and Gradle that widely used.
+Apache Ant mostly used by older project.</p>
+</div>
+<div class="paragraph">
+<p>Between Apache Maven and Gradle, I choose Apache Maven.</p>
+</div>
+<div class="paragraph">
+<p>There is a time when using Apache Maven for JavaFX project is need a lot of setup.
+Compared with Gradle which already supporting JavaFX, Apache Maven is not favorable.</p>
+</div>
+<div class="paragraph">
+<p>But, it&#8217;s not true anymore!
+Both Apache Maven and Gradle already support JavaFX project.
+In terms of setup and plugins intended for JavaFX development, both offer the same quality.</p>
+</div>
+<div class="paragraph">
+<p>The reason why I&#8217;m choosing Apache Maven is because the ability to upgrade my Java version.
+With Gradle, often time you need to upgrade the Gradle as well to support the latest Java release.
+Usually, Gradle release that support new release version will take some times.
+This will hinder you to upgrade your Java version immediatelly.</p>
+</div>
+<div class="paragraph">
+<p>With Apache Maven 3.3.x you could use Java 17, even you could use Java 18.</p>
+</div>
+<div class="paragraph">
+<p>Other things is, even though Apache Maven xml is claimed too verbose, but I still like it.
+I rather write the Apache Maven xml setup than batling my way with the Gradle builds configuration.
+Which there are a lot of way for doing one thing, even with adding Kotlin alongside with Groovy is not helping.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_quality">Code Quality</h3>
+<div class="paragraph">
+<p>Being an open-source project, anyone is welcome to contribute.
+It will attract people from any background and experience.</p>
+</div>
+<div class="paragraph">
+<p>The problem with this situation is quality of the project is at risk.
+Code style could differ between each contributor.
+Less experienced programmers may write buggy code.</p>
+</div>
+<div class="paragraph">
+<p>So, what I could do is set up a gatekeeper.
+I need to enforce some rules for the project.
+This is to make sure that the contribution will homogenous.</p>
+</div>
+<div class="sect3">
+<h4 id="_maven_enforcer">Maven Enforcer</h4>
+<div class="paragraph">
+<p>The very first gatekeepr is <a href="https://maven.apache.org/enforcer/maven-enforcer-plugin/">Maven Enforcer Plugin</a>.
+This will be used to make sure that the used Java version is not lower than Java 17.
+I also make sure that the Apache Maven version used starts from 3.8.4.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_checkstyle">Checkstyle</h4>
+<div class="paragraph">
+<p>The next step is to set up the code style.
+Having a homogenous code style will make code review easier.
+Not only that, debugging and tracing errors is easier.</p>
+</div>
+<div class="paragraph">
+<p>I choose <a href="https://checkstyle.org">Checkstyle</a> for the code style checker.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_test_code_coverage">Test Code Coverage</h4>
+<div class="paragraph">
+<p>The last gatekeeper is test coverage.
+I want the project have active and updated unit &amp; integration test.</p>
+</div>
+<div class="paragraph">
+<p>But, sometimes code coverage is not adding value to the project.
+I only put 40% coverage to pass the test code coverage rule.
+I also exclude classes that in fact can&#8217;t be tested or testing will not add any value at all.</p>
+</div>
+<div class="paragraph">
+<p>All the rules are checked using <a href="https://www.jacoco.org/jacoco/">JaCoCo</a>.</p>
+</div>
+<div class="paragraph">
+<p>Some people may find this irritating.
+Especially, when the rules are violated the build will fail.
+To be honest, I&#8217;m not that strict about all this setup.
+If there is a good reason to take out some of the rules, I&#8217;m willing to do it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_function_wishlist_roadmap">Function Wishlist Roadmap</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During the <a href="https://swardana.com/nayanika-journey-introduction/index.html">introduction</a> post, I have listed several wishlist.
+With the release of v1.0-M1, all the high priority is done.
+So, why the theme of this release is an MVP.
+You can use Nayanika right of the bat for this release.</p>
+</div>
+<div class="paragraph">
+<p>But, it&#8217;s not mean the journey is almost done.
+It&#8217;s the opposite in fact.
+During development, I encounter a performance issue with the current release.
+So, I will focus on this performance issue on the next milestone release.
+If possible I will include the Medium priority as well.</p>
+</div>
+<div class="sect2">
+<h3 id="_high_priority">High Priority</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><del>Processing user local directory which pictures stored.
+The first picture found will be displayed.</del></p>
+</li>
+<li>
+<p><del>Processing picture file from user local directory.
+The picture will be displayed.</del></p>
+</li>
+<li>
+<p><del>Navigate next, previous, last, and beginning within the pictures.</del></p>
+</li>
+<li>
+<p><del>Zoom and Pan displayed picture.</del></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_medium_priority">Medium Priority</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Applied sorting on pictures.</p>
+</li>
+<li>
+<p>Slide-show animation.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_low_priority">Low Priority</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Support CBZ / CBR file.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tech_debt">Tech Debt</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When opening 200 pictures or more with a size ~1-2MB the performance is degraded.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This is the end of the Nayanika journey for the release of Milestone 1.
+See you in the next update!</p>
+</div>
+</div>
+</div>
+</div></description>
+      </item>
       <item>
         <title>Slackware Installer</title>
         <link>https://swardana.com/slackware-installer/index.html</link>
